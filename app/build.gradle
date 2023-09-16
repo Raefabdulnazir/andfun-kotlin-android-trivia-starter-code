@@ -24,6 +24,10 @@ apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 31
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
     buildFeatures {
         dataBinding true
     }
@@ -47,6 +51,10 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    implementation 'com.google.android.material:material:1.9.0'
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
